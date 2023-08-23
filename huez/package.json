@@ -1,0 +1,19 @@
+{
+  "name": "huez",
+  "version": "1.0.0",
+  "description": "color palette generator",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ciobanunicolae/huez.git"
+  },
+  "author": "ciobanunicolae",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ciobanunicolae/huez/issues"
+  },
+  "homepage": "https://github.com/ciobanunicolae/huez"
+}
