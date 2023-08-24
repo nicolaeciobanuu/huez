@@ -1,6 +1,6 @@
 {
   "name": "huez",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "color palette generator",
   "main": "index.ts",
   "scripts": {
@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/ciobanunicolae/huez/issues"
   },
-  "homepage": "https://github.com/ciobanunicolae/huez"
+  "homepage": "https://github.com/ciobanunicolae/huez",
+  "dependencies": {
+    "chroma-js": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/chroma-js": "^2.4.0"
+  }
 }
