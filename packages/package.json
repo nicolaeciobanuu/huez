@@ -1,0 +1,31 @@
+{
+  "name": "huez",
+  "version": "1.0.3",
+  "description": "Automatic UI Color Palette Generator from a Base Color",
+  "keywords": [
+    "color",
+    "palette"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ciobanunicolae/huez.git"
+  },
+  "author": "ciobanunicolae",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ciobanunicolae/huez/issues"
+  },
+  "homepage": "https://github.com/ciobanunicolae/huez",
+  "dependencies": {
+    "chroma-js": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/chroma-js": "^2.4.0",
+    "typescript": "^5.2.2"
+  }
+}
