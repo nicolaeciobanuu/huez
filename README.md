@@ -27,4 +27,4 @@ try {
 
 ## License
 
-[MIT](https://opensource.org/license/mit/)
+[MIT](https://github.com/ciobanunicolae/huez/blob/master/LICENSE)
