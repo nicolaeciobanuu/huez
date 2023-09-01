@@ -1,15 +1,19 @@
 {
   "name": "huez",
-  "version": "1.0.3",
+  "version": "1.0.10",
   "description": "Automatic UI Color Palette Generator from a Base Color",
   "keywords": [
     "color",
-    "palette"
+    "palette",
+    "react"
   ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "preversion": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -26,6 +30,10 @@
   },
   "devDependencies": {
     "@types/chroma-js": "^2.4.0",
+    "rimraf": "^5.0.1",
     "typescript": "^5.2.2"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }

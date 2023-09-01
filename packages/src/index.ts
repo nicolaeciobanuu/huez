@@ -1,4 +1,4 @@
-import * as chroma from "chroma-js";
+import chroma from "chroma-js";
 
 const names = [
   "red", // 0
@@ -15,6 +15,10 @@ const names = [
   "pink", // 330
   "red", // 360
 ];
+
+interface ColorsTypes {
+  [category: string]: string[];
+}
 
 const luminanceLevels = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0].map(
   (n) => (n + 0.5) / 10
@@ -49,7 +53,7 @@ const keyword = (color: chroma.Color) => getHueName(chroma(color).hsl()[0]);
  *
  */
 
-const huez = (color: string, format: "hsl" | "rgb" | "hex"): object => {
+const huez = (color: string, format: "hsl" | "rgb" | "hex"): ColorsTypes => {
   if (!chroma.valid(color)) {
     throw new Error(
       "Invalid color format. Accepted formats are: hex, hsl, or rgb."
@@ -57,21 +61,27 @@ const huez = (color: string, format: "hsl" | "rgb" | "hex"): object => {
   }
 
   const baseColor = chroma(color);
+  const colors = [];
+  const palette: ColorsTypes = {};
   const [h, s, l] = baseColor.hsl();
   const hues = createHues(12)(h);
 
-  const obj: { [key: string]: any } = {
-    base: chroma(color)[format](),
-    gray: createShades(desaturate(1 / 8)(baseColor.hex()), format),
-  };
-
-  hues.forEach((h) => {
-    obj[keyword(chroma.hsl(h, s, l))] = createShades(
-      chroma.hsl(h, s, l).hex(),
-      format
-    );
+  colors.push({
+    category: "gray",
+    value: createShades(desaturate(1 / 8)("" + baseColor.hex()), format),
   });
 
-  return obj;
+  hues.forEach((h) => {
+    const c = chroma.hsl(h, s, l);
+    const key = keyword(c);
+    colors.push({
+      category: key,
+      values: createShades(c.hex(), format),
+    });
+  });
+  colors.forEach((color) => {
+    palette[color.category] = color.value;
+  });
+  return palette;
 };
 export { huez };
