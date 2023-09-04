@@ -1,0 +1,28 @@
+.color {
+  .box {
+    width: max(160px, 15vw);
+    height: 50px;
+    border-radius: var(--radius);
+    &:hover {
+      cursor: pointer;
+    }
+    &:active {
+      transform: scale(1.1);
+      
+    }
+  
+  }
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    margin-top: 0.3rem;
+    .name {
+      color: var(--heading);
+      font-weight: 600;
+    }
+    .value {
+      color: var(--paragraph);
+    }
+  }
+}
