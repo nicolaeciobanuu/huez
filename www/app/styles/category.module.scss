@@ -1,0 +1,19 @@
+.category {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  .name {
+    font-size: 1.5rem;
+    color: var(--foreground);
+  }
+  .flex {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
