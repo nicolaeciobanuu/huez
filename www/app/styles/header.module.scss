@@ -1,0 +1,40 @@
+.navbar {
+  width: max(390px, 10vw);
+  margin: 0 auto;
+  .list {
+    list-style: none;
+    display: flex;
+    border: 1px solid var(--border);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    margin-top: 1rem;
+    .item {
+      > a {
+        color: var(--foreground);
+        text-decoration: none;
+      }
+      .link {
+        border-radius: 0.33rem;
+        margin-right: 0.1rem;
+        transition: box-shadow 0.3s ease-in-out;
+        height: 32px;
+        aspect-ratio: 1/1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:active {
+          background-color: var(--active);
+        }
+        &:focus {
+          outline: none;
+          box-shadow: var(--focus);
+        }
+        &:hover {
+          background: var(--hover);
+        }
+      }
+    }
+  }
+}
