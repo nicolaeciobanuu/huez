@@ -6,12 +6,12 @@ const names = [
   "yellow", // 60
   "lime", // 90
   "green", // 120
-  "teal", // 150
+  "turquoise", // 150
   "cyan", // 180
   "blue", // 210
   "indigo", // 240
   "violet", // 270
-  "fuschia", // 300
+  "magenta", // 300
   "pink", // 330
   "red", // 360
 ];
@@ -26,10 +26,13 @@ const luminanceLevels = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0].map(
 
 const getHueName = (h: number) => names[Math.round((h - 2) / 30)];
 
-const createHues = (length: number) => (base: number) =>
-  Array.from({ length }, (_, n) =>
-    Math.floor((base + n * (360 / length)) % 360)
-  );
+const createHues = (length: number) => (base: number) => {
+  const hues: number[] = [];
+  for (let n = 0; n < length; n++) {
+    hues.push(Math.floor((base + n * (360 / length)) % 360));
+  }
+  return hues;
+};
 
 const desaturate = (n: number) => (hex: string) => {
   const [h, , l] = chroma(hex).hsl();
@@ -41,7 +44,8 @@ const createShades = (color: string, format: string) =>
     return (chroma(color).luminance(lum) as any)[format]();
   });
 
-const keyword = (color: chroma.Color) => getHueName(chroma(color).hsl()[0]);
+const keyword = (color: chroma.Color) =>
+  chroma(color).hsl()[1] < 0.5 ? "gray" : getHueName(chroma(color).hsl()[0]);
 
 /**
  * Generates palette from base color.
@@ -76,7 +80,7 @@ const huez = (color: string, format: "hsl" | "rgb" | "hex"): ColorsTypes => {
     const key = keyword(c);
     colors.push({
       category: key,
-      values: createShades(c.hex(), format),
+      value: createShades(c.hex(), format),
     });
   });
   colors.forEach((color) => {
