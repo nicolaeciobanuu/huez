@@ -28,7 +28,8 @@ try {
 ## To do
 
 - [x] Add contibuting guide
-- [ ] Change output to string ( hsl(30, 50%, 75%) instead of [30,50,75] )
+- [ ] Set up workflows
+- [ ] Change output to formatted string ( hsl(30, 50%, 75%) instead of [30,50,75] )
 - [ ] Create documentation
 
 ## Contributing
