@@ -25,6 +25,16 @@ try {
 }
 ```
 
+## To do
+
+- [x] Add contibuting guide
+- [ ] Change output to string ( hsl(30, 50%, 75%) instead of [30,50,75] )
+- [ ] Create documentation
+
+## Contributing
+
+Please read the [contributing guide](/CONTIBUTING.md)
+
 ## License
 
 [MIT](https://github.com/ciobanunicolae/huez/blob/master/LICENSE)
