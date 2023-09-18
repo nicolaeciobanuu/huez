@@ -1,4 +1,4 @@
-import styles from "@/styles/notation.module.scss";
+import styles from "./notation.module.scss";
 
 export function Notation({
   changeFormat,

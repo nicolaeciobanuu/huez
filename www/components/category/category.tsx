@@ -1,5 +1,5 @@
-import { Color } from "./color";
-import styles from "@/styles/category.module.scss";
+import styles from "./category.module.scss";
+
 export function Category({
   children,
   name,

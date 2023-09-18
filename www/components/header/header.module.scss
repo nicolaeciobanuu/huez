@@ -4,20 +4,27 @@
   .list {
     list-style: none;
     display: flex;
-    border: 1px solid var(--border);
+
     align-items: center;
-    justify-content: space-between;
+    gap: 1rem;
     padding: 0.5rem 1rem;
-    border-radius: 30px;
-    margin-top: 1rem;
+
+    margin-top: 2rem;
     .item {
       > a {
         color: var(--foreground);
         text-decoration: none;
+        padding: 1rem;
+        border-radius: var(--radius);
+        &:hover {
+          background: var(--hover);
+          color: var(--heading)
+        }
       }
       .link {
         border-radius: 0.33rem;
         margin-right: 0.1rem;
+        padding: 0;
         transition: box-shadow 0.3s ease-in-out;
         height: 32px;
         aspect-ratio: 1/1;

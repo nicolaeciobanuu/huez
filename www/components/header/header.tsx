@@ -1,6 +1,6 @@
 "use client";
+import styles from "./header.module.scss";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import styles from "@/styles/header.module.scss";
 import Link from "next/link";
 export function Header() {
   return (
@@ -10,7 +10,7 @@ export function Header() {
           <Link href="/">Huez</Link>
         </li>
         <li className={styles.item}>
-          <Link href="/docs">Docs</Link>
+          <Link href="/docs">Documentation</Link>
         </li>
         <li className={styles.item}>
           <a

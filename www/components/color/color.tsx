@@ -1,4 +1,4 @@
-import styles from "@/styles/color.module.scss";
+import styles from "./color.module.scss";
 export function Color({
   color,
   name,

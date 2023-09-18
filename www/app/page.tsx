@@ -1,10 +1,9 @@
 "use client";
+
 import * as React from "react";
 import { huez } from "huez";
-import { Category } from "./components/category";
-import { Color } from "@/components/color";
-import { Search } from "./components/search";
-import styles from "@/styles/_page.module.scss";
+import { Category, Color, Search } from "@/components";
+
 export default function Home() {
   const [baseColor, setBaseColor] = React.useState("#0077CC");
   const [format, setFormat] = React.useState<"hsl" | "rgb" | "hex">("hex");

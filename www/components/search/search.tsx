@@ -1,5 +1,7 @@
-import styles from "@/styles/search.module.scss";
-import { Notation } from "./notation";
+import styles from "./search.module.scss";
+
+
+import { Notation } from "../notation/notation";
 type SearchTypes = {
   baseColor: string;
   handleSubmit: Function;
