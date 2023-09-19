@@ -13,18 +13,21 @@
   .input {
     flex-grow: 3;
     min-width: 50px;
-    border: 1px solid var(--border);
+    border: 1px solid var(--gray-light);
     padding: 0 0.5rem;
-    color: var(--heading);
+    color: var(--gray-darker);
     background-color: var(--input);
+    &:focus{
+      outline: none;
+    }
   }
   .submit {
     flex-grow: 1;
     padding: 0 0.5rem;
-    border: 1px solid var(--border);
+    border: 1px solid var(--gray-light);
     border-radius: var(--radius);
-    color: #f2f2f2;
-    background-color: var(--submit);
+    color: var(--gray-darkest);
+    background-color: var(--gray-lighter);
     &:hover {
       cursor: pointer;
     }
