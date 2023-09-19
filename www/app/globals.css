@@ -1,15 +1,9 @@
 :root {
-  --background: hsl(0, 0%, 100%);
-  --radius: 4px;
-  --foreground: hsl(206, 13%, 25%);
-  --heading: hsl(206, 12%, 43%);
-  --paragraph: hsl(205, 8%, 70%);
-  --border: hsl(200, 9%, 93%);
-  --input: rgb(249, 249, 250);
-  --submit: hsl(0, 0%, 12%);
-  --hover: hsl(210, 20%, 95%);
-  --active: hsl(210, 20%, 90%);
-  --focus: 0 0 2px hsla(224, 71%, 4%, 0.5);
+  --gray-lighter: hsl(0, 0%, 98%);
+  --gray-light: hsl(0, 0%, 88%);
+  --gray: hsl(0, 0%, 77%);
+  --gray-dark: hsl(0, 0%, 54%);
+  --gray-darker: hsl(0, 0%, 25%);
 }
 
 * {
