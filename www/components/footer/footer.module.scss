@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 2rem 0;
+    padding-top: 2rem;
+    border-top: 1px solid var(--gray-light);
+    a{
+        text-decoration: none;
+    }
+}
